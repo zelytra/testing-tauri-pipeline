@@ -6,10 +6,12 @@ on:
       - 'v*'  # This will trigger the workflow on push to tags like v1.0, v2.0, etc.
 
 jobs:
-  build:
+  tauri-build:
     name: Build Tauri Application
     runs-on: windows-latest
-
+    defaults:
+      run:
+        working-directory: 'frontend'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -28,19 +30,19 @@ jobs:
           override: true
 
       - name: Install Dependencies
-        run: yarn install  # Or npm install
+        run: npm install
 
       - name: Build Tauri App
-        run: yarn tauri build  # Or npm run tauri build
+        run: npm run tauri-build  # Or npm run tauri build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: tauri-app-exe
-          path: ./src-tauri/target/release/*.exe  # Adjust the path to your .exe location
+          path: ./frontend/src-tauri/target/release/*.exe
 
-  release:
-    needs: build
+  tauri-release:
+    needs: tauri-build
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
@@ -66,5 +68,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./tauri-app-exe/*.exe  # Adjust the path if needed
-          asset_name: YourAppName.exe  # Rename this to your app's name
+          asset_name: BetterFleet.exe  # Rename this to your app's name
           asset_content_type: application/octet-stream
