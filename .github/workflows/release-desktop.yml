@@ -46,9 +46,8 @@ jobs:
         with:
           name: exe
           path: |
-            ./frontend/src-tauri/target/release/bundle/msi/*.msi
-            ./frontend/src-tauri/target/release/bundle/nsis/*.exe 
-            ./frontend/src-tauri/target/release/*.exe
+            ./frontend/src-tauri/target/release/**/*.msi
+            ./frontend/src-tauri/target/release/**/*.exe
           
 
   publish:
@@ -60,8 +59,8 @@ jobs:
       - uses: actions/download-artifact@v4
         id: download
         with:
-          name: artifacts
-          path: artifacts
+          name: exe
+          path: exe
       # And create a release with the artifacts attached
       - name: 'create release'
         uses: softprops/action-gh-release@master
@@ -69,4 +68,4 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
           draft: true
-          files: ./artifacts/**/*
+          files: ./exe/**/*
