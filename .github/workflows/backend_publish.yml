@@ -1,13 +1,9 @@
 name: Publish backend
 
 on:
-  workflow_dispatch:
-    inputs:
-      versionNumber:
-        description: 'Version Number'
-        required: true
-        type: string
-        default: 'latest'
+  push:
+    tags:
+      - 'v*'  # This will trigger the workflow on push to tags like v1.0, v2.0, etc.
 
 jobs:
   publish:
