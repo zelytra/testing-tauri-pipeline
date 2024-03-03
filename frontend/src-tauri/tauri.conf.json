@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "untitled",
+    "productName": "BetterFleet",
     "version": "0.1.0"
   },
   "tauri": {
