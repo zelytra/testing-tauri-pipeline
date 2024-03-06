@@ -5,7 +5,7 @@
   "platforms": {
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURGFna0xGTkxRRmtUSDZjYmdCZ1Y5TytURHNmU1hOU0FhaUpQaFhYY2p2UXRpVURuanJlWFl3OGJIYk1CZ05IOTNlekdseURGZmZBS3o4N2RZcW82dlZmV3pEM2FvNHdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzA5NzQ1ODQ5CWZpbGU6QmV0dGVyRmxlZXRfMC4xLjBfeDY0LXNldHVwLm5zaXMuemlwCjN0VlZoaklQT3ZyRXdkKy9NclFCOElFVkt4UDkwS0ZoMHpXeWVtcXRjdVF3U1h1a2dmSW43MVFwbGRkMU40ajFVYkVIeFFpR2trWGlCTlFLVmN0UENRPT0K",
-      "url": "https://github.com/zelytra/testing-tauri-pipeline/releases/download/v0.1.0/BetterFleet_0.1.0-x64-setup.nsis.zip"
+      "url": "https://github.com/zelytra/testing-tauri-pipeline/releases/download/betterfleet-v0.1.0/BetterFleet_0.1.0_x64_en-US.msi.zip"
     }
   }
 }
