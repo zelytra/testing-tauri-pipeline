@@ -18,7 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
-    <h1>For pity</h1>
+    <h1>For pity wiuehfuiw ehfuiw hfihwe ifhwui fehiu hfiweuh </h1>
   </div>
 `
 
