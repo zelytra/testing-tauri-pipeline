@@ -31,7 +31,6 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
         with:
-          key: ${{ matrix.config.rust_target }}
           workspaces: 'frontend/src-tauri'
 
       - name: install dependencies (ubuntu only)
